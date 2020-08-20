@@ -34,3 +34,5 @@ print('there are ', numOfPupils, ' people in your group')
 print('and your ticket prices and names are: ')
 for x in range(numOfPupils):
   print(names[x], '\t', ticketPrices[x])
+
+	#test
