@@ -4,10 +4,12 @@
 groupName = input('What\'s the group name?: ')
 
 #gets number of people in group
-numOfPupils = int(input('How many people? (between 4 and 10): '))
+numOfPupils = float(input('How many people? (between 4 and 10): '))
+
 #error checking for num of pupils
-while numOfPupils < 4 or numOfPupils > 10:
-  numOfPupils = int(input('i said between 4 and 10: '))
+while numOfPupils < 4 or numOfPupils > 10 or not numOfPupils.is_integer():
+  numOfPupils = float(input('i said between 4 and 10 you dumb : '))
+numOfPupils = int(numOfPupils)
 
 #get names for the number and do they want a photo?
 names = []
@@ -33,6 +35,4 @@ print('your group is called ', groupName)
 print('there are ', numOfPupils, ' people in your group')
 print('and your ticket prices and names are: ')
 for x in range(numOfPupils):
-  print(names[x], '\t', ticketPrices[x])
-
-	#test
+  print(f'{names[x]: 16}{ticketPrices[x]}')
